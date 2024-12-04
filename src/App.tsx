@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+
+// Componente wrapper para el video
+const AppContent = () => {
+  const location = useLocation();
+  
+  return (
+    <div className="App">
+      {location.pathname === '/' && (
+        <div className="video-container">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="video-background"
+          >
+            <source src="/background.mp4" type="video/mp4" />
+          </video>
+          <div className="video-overlay"></div>
+        </div>
+      )}
+      
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+      </div>
+      
+    </div>
+  );
+};
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <AppContent />
+    </Router>
+  );
 }
 
-export default App
+export default App;
