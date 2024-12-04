@@ -1,0 +1,54 @@
+.center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.centered-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.logo-text {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.link-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 2rem;
+}
+
+.left-link,
+.right-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.left-link:hover,
+.right-link:hover {
+    transform: translateY(-3px);
+}
+
+.no-copy {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
