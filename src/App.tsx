@@ -17,7 +17,7 @@ const AppContent = () => {
             playsInline
             className="video-background"
           >
-            <source src="https://imgur.com/u5CH0pO" type="video/mp4" />
+            <source src="/background.mp4" type="video/mp4" />
           </video>
           <div className="video-overlay"></div>
         </div>
