@@ -1,4 +1,4 @@
-
+import { Link } from 'react-router-dom';
 import '../styles/Home.css';
 
 function Home() {
@@ -20,8 +20,8 @@ function Home() {
   
         <div className="center-container">
           <div className="link-container">
-            <a href="/blog" className="left-link no-copy">BLOG</a>
-            <a href="/docs" className="right-link no-copy">DOCS</a>
+            <Link to="/blog" className="left-link no-copy">BLOG</Link>
+            <Link to="/docs" className="right-link no-copy">DOCS</Link>
           </div>
         </div>
       </>
