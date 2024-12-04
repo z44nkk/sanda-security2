@@ -20,7 +20,7 @@ function Home() {
   
         <div className="center-container">
           <div className="link-container">
-            <Link to="/blog" className="left-link no-copy">BLOG</Link>
+            <Link to="https://blog-sanda.vercel.app/" className="left-link no-copy">BLOG</Link>
             <Link to="/docs" className="right-link no-copy">DOCS</Link>
           </div>
         </div>
